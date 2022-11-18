@@ -25,4 +25,15 @@ ALTER TABLE Uczniowie
 ADD FOREIGN KEY (IDKlasy)
 REFERENCES Klasy(IDKlasy);
 
--- ZMIENIAM TEN PLIK TEST3
+CREATE TABLE 4eP_matura
+(
+    NumerLegitymacji INT,
+    IDPrzedmiotu INT,
+    PRIMARY KEY(NumerLegitymacji, IDPrzedmiotu);
+)
+
+ALTER TABLE Matura
+ADD FOREIGN KEY(NumerLegitymacji)
+REFERENCES Uczniowie(NumerLegitymacji),
+ADD FOREIGN KEY(IDPrzedmiotu)
+REFERENCES Uczniowie(IDPrzedmiotu)
