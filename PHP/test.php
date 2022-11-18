@@ -1,3 +1,7 @@
+<?php
+    require_once "script.php";
+?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -17,15 +21,12 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         
-        <?php
+        <form action="script.php" method="post">
+            <input type="text">
+            <input type="submit">
+        </form>
 
-        function aee(){
-            echo 'ddd';
-        }
-        
-        aee()
-
-        ?>
+        <?php wynik(); ?>
 
         <script src="" async defer></script>
     </body>
